@@ -10,9 +10,23 @@
 		6DB428941DCCA0D8006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428921DCCA0D8006582BE /* main.swift */; };
 		6DB428951DCCA0D8006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
 		6DB428971DCCA1D1006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
+		6DB428991DCCA9C5006582BE /* URLCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428981DCCA9C5006582BE /* URLCacheManager.swift */; };
+		6DB428AB1DCCC5C7006582BE /* SwiftyNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */; };
+		6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
+		6DB428B11DCCC64A006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
+		6DB428B91DCCC6F9006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428B81DCCC6F9006582BE /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6DB428B41DCCC6F9006582BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		6DC3E27F1DCB6E5A00ED6FDE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -28,10 +42,30 @@
 		6DB428921DCCA0D8006582BE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNetworking.swift; sourceTree = "<group>"; };
+		6DB428981DCCA9C5006582BE /* URLCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheManager.swift; sourceTree = "<group>"; };
+		6DB428A81DCCC5C7006582BE /* SwiftyNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetworkingTests.swift; sourceTree = "<group>"; };
+		6DB428AC1DCCC5C7006582BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB428B61DCCC6F9006582BE /* SwiftyNetworkingTestHost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworkingTestHost; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB428B81DCCC6F9006582BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworking; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6DB428A51DCCC5C7006582BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DB428B31DCCC6F9006582BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DC3E27E1DCB6E5A00ED6FDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,16 +80,36 @@
 			isa = PBXGroup;
 			children = (
 				6DB428921DCCA0D8006582BE /* main.swift */,
-				6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */,
 				6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */,
+				6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */,
+				6DB428981DCCA9C5006582BE /* URLCacheManager.swift */,
 			);
 			path = SwiftyNetworking;
+			sourceTree = "<group>";
+		};
+		6DB428A91DCCC5C7006582BE /* SwiftyNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */,
+				6DB428AC1DCCC5C7006582BE /* Info.plist */,
+			);
+			path = SwiftyNetworkingTests;
+			sourceTree = "<group>";
+		};
+		6DB428B71DCCC6F9006582BE /* SwiftyNetworkingTestHost */ = {
+			isa = PBXGroup;
+			children = (
+				6DB428B81DCCC6F9006582BE /* main.swift */,
+			);
+			path = SwiftyNetworkingTestHost;
 			sourceTree = "<group>";
 		};
 		6DC3E2781DCB6E5A00ED6FDE = {
 			isa = PBXGroup;
 			children = (
 				6DB428911DCCA0D8006582BE /* SwiftyNetworking */,
+				6DB428A91DCCC5C7006582BE /* SwiftyNetworkingTests */,
+				6DB428B71DCCC6F9006582BE /* SwiftyNetworkingTestHost */,
 				6DC3E2821DCB6E5A00ED6FDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */,
+				6DB428A81DCCC5C7006582BE /* SwiftyNetworkingTests.xctest */,
+				6DB428B61DCCC6F9006582BE /* SwiftyNetworkingTestHost */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +127,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6DB428A71DCCC5C7006582BE /* SwiftyNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB428AD1DCCC5C7006582BE /* Build configuration list for PBXNativeTarget "SwiftyNetworkingTests" */;
+			buildPhases = (
+				6DB428A41DCCC5C7006582BE /* Sources */,
+				6DB428A51DCCC5C7006582BE /* Frameworks */,
+				6DB428A61DCCC5C7006582BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyNetworkingTests;
+			productName = SwiftyNetworkingTests;
+			productReference = 6DB428A81DCCC5C7006582BE /* SwiftyNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6DB428B51DCCC6F9006582BE /* SwiftyNetworkingTestHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB428BA1DCCC6F9006582BE /* Build configuration list for PBXNativeTarget "SwiftyNetworkingTestHost" */;
+			buildPhases = (
+				6DB428B21DCCC6F9006582BE /* Sources */,
+				6DB428B31DCCC6F9006582BE /* Frameworks */,
+				6DB428B41DCCC6F9006582BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyNetworkingTestHost;
+			productName = SwiftyNetworkingTestHost;
+			productReference = 6DB428B61DCCC6F9006582BE /* SwiftyNetworkingTestHost */;
+			productType = "com.apple.product-type.tool";
+		};
 		6DC3E2801DCB6E5A00ED6FDE /* SwiftyNetworking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DC3E2881DCB6E5A00ED6FDE /* Build configuration list for PBXNativeTarget "SwiftyNetworking" */;
@@ -98,6 +188,14 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Maxim Makhun";
 				TargetAttributes = {
+					6DB428A71DCCC5C7006582BE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					6DB428B51DCCC6F9006582BE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					6DC3E2801DCB6E5A00ED6FDE = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -117,17 +215,48 @@
 			projectRoot = "";
 			targets = (
 				6DC3E2801DCB6E5A00ED6FDE /* SwiftyNetworking */,
+				6DB428A71DCCC5C7006582BE /* SwiftyNetworkingTests */,
+				6DB428B51DCCC6F9006582BE /* SwiftyNetworkingTestHost */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		6DB428A61DCCC5C7006582BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		6DB428A41DCCC5C7006582BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB428B11DCCC64A006582BE /* URLSessionProtocol.swift in Sources */,
+				6DB428AB1DCCC5C7006582BE /* SwiftyNetworkingTests.swift in Sources */,
+				6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DB428B21DCCC6F9006582BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB428B91DCCC6F9006582BE /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DC3E27D1DCB6E5A00ED6FDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6DB428971DCCA1D1006582BE /* SwiftyNetworking.swift in Sources */,
 				6DB428951DCCA0D8006582BE /* URLSessionProtocol.swift in Sources */,
+				6DB428991DCCA9C5006582BE /* URLCacheManager.swift in Sources */,
 				6DB428941DCCA0D8006582BE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +264,48 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6DB428AE1DCCC5C7006582BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftyNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makhun.SwiftyNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6DB428AF1DCCC5C7006582BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftyNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makhun.SwiftyNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6DB428BB1DCCC6F9006582BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6DB428BC1DCCC6F9006582BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		6DC3E2861DCB6E5A00ED6FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,6 +413,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6DB428AD1DCCC5C7006582BE /* Build configuration list for PBXNativeTarget "SwiftyNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB428AE1DCCC5C7006582BE /* Debug */,
+				6DB428AF1DCCC5C7006582BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DB428BA1DCCC6F9006582BE /* Build configuration list for PBXNativeTarget "SwiftyNetworkingTestHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB428BB1DCCC6F9006582BE /* Debug */,
+				6DB428BC1DCCC6F9006582BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6DC3E27C1DCB6E5A00ED6FDE /* Build configuration list for PBXProject "SwiftyNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
