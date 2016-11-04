@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DB428941DCCA0D8006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428921DCCA0D8006582BE /* main.swift */; };
+		6DB428951DCCA0D8006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
+		6DB428971DCCA1D1006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DC3E27F1DCB6E5A00ED6FDE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6DB428921DCCA0D8006582BE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNetworking.swift; sourceTree = "<group>"; };
+		6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworking; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DC3E27E1DCB6E5A00ED6FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DB428911DCCA0D8006582BE /* SwiftyNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				6DB428921DCCA0D8006582BE /* main.swift */,
+				6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */,
+				6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */,
+			);
+			path = SwiftyNetworking;
+			sourceTree = "<group>";
+		};
+		6DC3E2781DCB6E5A00ED6FDE = {
+			isa = PBXGroup;
+			children = (
+				6DB428911DCCA0D8006582BE /* SwiftyNetworking */,
+				6DC3E2821DCB6E5A00ED6FDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DC3E2821DCB6E5A00ED6FDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DC3E2801DCB6E5A00ED6FDE /* SwiftyNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DC3E2881DCB6E5A00ED6FDE /* Build configuration list for PBXNativeTarget "SwiftyNetworking" */;
+			buildPhases = (
+				6DC3E27D1DCB6E5A00ED6FDE /* Sources */,
+				6DC3E27E1DCB6E5A00ED6FDE /* Frameworks */,
+				6DC3E27F1DCB6E5A00ED6FDE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyNetworking;
+			productName = CustomNSURLProtocol;
+			productReference = 6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DC3E2791DCB6E5A00ED6FDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Maxim Makhun";
+				TargetAttributes = {
+					6DC3E2801DCB6E5A00ED6FDE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6DC3E27C1DCB6E5A00ED6FDE /* Build configuration list for PBXProject "SwiftyNetworking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DC3E2781DCB6E5A00ED6FDE;
+			productRefGroup = 6DC3E2821DCB6E5A00ED6FDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DC3E2801DCB6E5A00ED6FDE /* SwiftyNetworking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DC3E27D1DCB6E5A00ED6FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB428971DCCA1D1006582BE /* SwiftyNetworking.swift in Sources */,
+				6DB428951DCCA0D8006582BE /* URLSessionProtocol.swift in Sources */,
+				6DB428941DCCA0D8006582BE /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6DC3E2861DCB6E5A00ED6FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6DC3E2871DCB6E5A00ED6FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6DC3E2891DCB6E5A00ED6FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6DC3E28A1DCB6E5A00ED6FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DC3E27C1DCB6E5A00ED6FDE /* Build configuration list for PBXProject "SwiftyNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DC3E2861DCB6E5A00ED6FDE /* Debug */,
+				6DC3E2871DCB6E5A00ED6FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DC3E2881DCB6E5A00ED6FDE /* Build configuration list for PBXNativeTarget "SwiftyNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DC3E2891DCB6E5A00ED6FDE /* Debug */,
+				6DC3E28A1DCB6E5A00ED6FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DC3E2791DCB6E5A00ED6FDE /* Project object */;
+}
