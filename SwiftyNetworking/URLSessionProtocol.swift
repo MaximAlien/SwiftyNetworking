@@ -20,7 +20,9 @@ class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDe
     }
     
     override func startLoading() {
-        let session = URLSession.init(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        let session = URLSession.init(configuration: URLSessionConfiguration.default,
+                                      delegate: self,
+                                      delegateQueue: nil)
         sessionTask = session.dataTask(with: self.request)
         sessionTask.resume()
     }
@@ -33,7 +35,9 @@ class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDe
                     dataTask: URLSessionDataTask,
                     didReceive response: URLResponse,
                     completionHandler: @escaping (URLSession.ResponseDisposition) -> Swift.Void) {
-        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
+        client?.urlProtocol(self,
+                            didReceive: response,
+                            cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
         
         completionHandler(URLSession.ResponseDisposition.allow)
     }

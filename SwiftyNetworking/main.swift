@@ -8,4 +8,5 @@
 
 import Foundation
 
-SwiftyNetworking.sendRequestThroughProtocol()
+//SwiftyNetworking.sendRequestThroughProtocol()
+SwiftyNetworking.sendRequestAndCache()
