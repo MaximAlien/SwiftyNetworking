@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D8C790C1DE0B33900DD40BE /* URLCacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8C790B1DE0B33900DD40BE /* URLCacheManagerTests.swift */; };
+		6D8C790D1DE0B4AA00DD40BE /* URLCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428981DCCA9C5006582BE /* URLCacheManager.swift */; };
+		6D8C790E1DE0B4B200DD40BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
+		6D8C790F1DE0B4B400DD40BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
+		6D8C79101DE0B4D300DD40BE /* URLCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428981DCCA9C5006582BE /* URLCacheManager.swift */; };
 		6DB428941DCCA0D8006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428921DCCA0D8006582BE /* main.swift */; };
 		6DB428951DCCA0D8006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
 		6DB428971DCCA1D1006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
 		6DB428991DCCA9C5006582BE /* URLCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428981DCCA9C5006582BE /* URLCacheManager.swift */; };
-		6DB428AB1DCCC5C7006582BE /* SwiftyNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */; };
 		6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
 		6DB428B11DCCC64A006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
 		6DB428B91DCCC6F9006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428B81DCCC6F9006582BE /* main.swift */; };
@@ -39,12 +43,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D8C790B1DE0B33900DD40BE /* URLCacheManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheManagerTests.swift; sourceTree = "<group>"; };
 		6DB428921DCCA0D8006582BE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNetworking.swift; sourceTree = "<group>"; };
 		6DB428981DCCA9C5006582BE /* URLCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCacheManager.swift; sourceTree = "<group>"; };
 		6DB428A81DCCC5C7006582BE /* SwiftyNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyNetworkingTests.swift; sourceTree = "<group>"; };
 		6DB428AC1DCCC5C7006582BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB428B61DCCC6F9006582BE /* SwiftyNetworkingTestHost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworkingTestHost; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB428B81DCCC6F9006582BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -90,8 +94,8 @@
 		6DB428A91DCCC5C7006582BE /* SwiftyNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				6DB428AA1DCCC5C7006582BE /* SwiftyNetworkingTests.swift */,
 				6DB428AC1DCCC5C7006582BE /* Info.plist */,
+				6D8C790B1DE0B33900DD40BE /* URLCacheManagerTests.swift */,
 			);
 			path = SwiftyNetworkingTests;
 			sourceTree = "<group>";
@@ -185,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Maxim Makhun";
 				TargetAttributes = {
 					6DB428A71DCCC5C7006582BE = {
@@ -237,8 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB428B11DCCC64A006582BE /* URLSessionProtocol.swift in Sources */,
-				6DB428AB1DCCC5C7006582BE /* SwiftyNetworkingTests.swift in Sources */,
 				6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */,
+				6D8C79101DE0B4D300DD40BE /* URLCacheManager.swift in Sources */,
+				6D8C790C1DE0B33900DD40BE /* URLCacheManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8C790E1DE0B4B200DD40BE /* URLSessionProtocol.swift in Sources */,
+				6D8C790D1DE0B4AA00DD40BE /* URLCacheManager.swift in Sources */,
 				6DB428B91DCCC6F9006582BE /* main.swift in Sources */,
+				6D8C790F1DE0B4B400DD40BE /* SwiftyNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +332,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -372,6 +381,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -391,6 +401,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -420,6 +431,7 @@
 				6DB428AF1DCCC5C7006582BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DB428BA1DCCC6F9006582BE /* Build configuration list for PBXNativeTarget "SwiftyNetworkingTestHost" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +440,7 @@
 				6DB428BC1DCCC6F9006582BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DC3E27C1DCB6E5A00ED6FDE /* Build configuration list for PBXProject "SwiftyNetworking" */ = {
 			isa = XCConfigurationList;
