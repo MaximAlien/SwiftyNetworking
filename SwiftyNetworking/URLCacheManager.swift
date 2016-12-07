@@ -8,8 +8,8 @@
 
 import Foundation
 
-let kCacheSize = 20 * 1024 * 1024;
-let kExpirationKey = "expiration_key";
+let kCacheSize = 20 * 1024 * 1024
+let kExpirationKey = "expiration_key"
 
 class URLCacheManager : URLCache {
     
