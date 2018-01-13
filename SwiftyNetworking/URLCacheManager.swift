@@ -33,7 +33,7 @@ class URLCacheManager : URLCache {
     override func cachedResponse(for request: URLRequest) -> CachedURLResponse? {
         let cachedResponse = super.cachedResponse(for: request)
         
-        return cachedResponse;
+        return cachedResponse
     }
     
     override func storeCachedResponse(_ cachedResponse: CachedURLResponse, for request: URLRequest) {

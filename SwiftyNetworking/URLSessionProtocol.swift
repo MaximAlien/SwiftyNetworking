@@ -9,14 +9,14 @@
 import Foundation
 
 class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDelegate {
-    private var sessionTask: URLSessionTask!;
+    private var sessionTask: URLSessionTask!
     
     override class func canInit(with request: URLRequest) -> Bool {
-        return true;
+        return true
     }
     
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-        return request;
+        return request
     }
     
     override func startLoading() {

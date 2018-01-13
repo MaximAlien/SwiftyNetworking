@@ -23,7 +23,7 @@ class SwiftyNetworking {
         let sessionTask = session.dataTask(with: URL.init(string: "https://www.google.com/")!) { (data, response, error) in
             if (error == nil) {
                 let httpResponse = response as! HTTPURLResponse
-                print("Status code: \(httpResponse.statusCode) after request to: \(httpResponse.url)")
+                print("Status code: \(httpResponse.statusCode) after request to: \(String(describing: httpResponse.url))")
             }
             
             semaphore.signal()
@@ -46,7 +46,7 @@ class SwiftyNetworking {
         
         // make request
         let session = URLSession.shared
-        var sessionTask: URLSessionTask = URLSessionTask();
+        var sessionTask: URLSessionTask = URLSessionTask()
         
         sessionTask = session.dataTask(with: URL.init(string: "https://www.google.com/")!) { (data, response, error) in
             let respData: Data
