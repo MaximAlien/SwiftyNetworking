@@ -9,8 +9,9 @@
 import Foundation
 
 class SwiftyNetworking {
+    
     static func sendRequestThroughProtocol() {
-        print("Started request")
+        print("Started protocol request")
         
         // register custom protocol
         URLProtocol.registerClass(URLSessionProtocol.self)
@@ -20,22 +21,27 @@ class SwiftyNetworking {
         
         // make request
         let session = URLSession.shared
-        let sessionTask = session.dataTask(with: URL.init(string: "https://www.google.com/")!) { (data, response, error) in
-            if (error == nil) {
-                let httpResponse = response as! HTTPURLResponse
-                print("Status code: \(httpResponse.statusCode) after request to: \(String(describing: httpResponse.url))")
+        let sessionDataTask = session.dataTask(with: Constants.requestURL) { (data, response, error) in
+            if let error = error {
+                print("Error occured: \(error.localizedDescription)")
+                return
             }
-            
+
+            if let response = response {
+                let httpResponse = response as! HTTPURLResponse
+                print("Status code: \(httpResponse.statusCode) after request to: \(httpResponse.url!)")
+            }
+
             semaphore.signal()
         }
-        sessionTask.resume()
+        sessionDataTask.resume()
         
         // wait for completion
         semaphore.wait()
         
         URLProtocol.unregisterClass(URLSessionProtocol.self)
         
-        print("Finished request")
+        print("Finished protocol request")
     }
     
     static func sendRequestAndCache() {
@@ -47,19 +53,35 @@ class SwiftyNetworking {
         // make request
         let session = URLSession.shared
         var sessionTask: URLSessionTask = URLSessionTask()
-        
-        sessionTask = session.dataTask(with: URL.init(string: "https://www.google.com/")!) { (data, response, error) in
-            let respData: Data
-            if (error == nil) {
-                respData = data!
-                URLCacheManager.sharedInstance.cacheData(for: sessionTask, data: respData)
-            } else {
-                respData = URLCacheManager.sharedInstance.cache(for: sessionTask)!
+
+        sessionTask = session.dataTask(with: Constants.requestURL) { (data, response, error) in
+            if let error = error {
+                print("Error occured: \(error.localizedDescription)")
             }
-            
-            print("Data: \(respData)")
-            
-            semaphore.signal()
+
+            if let data = data {
+                URLCacheManager.sharedInstance.cacheData(for: sessionTask, data: data)
+                print("Original data: \(data)")
+            }
+
+            // attempt to load data from cache
+            if let cachedData = URLCacheManager.sharedInstance.cache(for: sessionTask) {
+                print("Cached data: \(cachedData)")
+            } else {
+                print("Cached response data not found")
+            }
+
+            print("Waiting for cache to expire...")
+            DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + Constants.cacheExpirationDuration + 5.0) {
+                // attempt to load data from cache
+                if let cachedData = URLCacheManager.sharedInstance.cache(for: sessionTask) {
+                    print("Cached data: \(cachedData)")
+                } else {
+                    print("Cache has expired")
+                }
+
+                semaphore.signal()
+            }
         }
         sessionTask.resume()
         

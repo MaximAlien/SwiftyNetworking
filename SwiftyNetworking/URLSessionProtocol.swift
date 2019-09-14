@@ -9,6 +9,7 @@
 import Foundation
 
 class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDelegate {
+    
     private var sessionTask: URLSessionTask!
     
     override class func canInit(with request: URLRequest) -> Bool {
@@ -20,15 +21,15 @@ class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDe
     }
     
     override func startLoading() {
-        let session = URLSession.init(configuration: URLSessionConfiguration.default,
-                                      delegate: self,
-                                      delegateQueue: nil)
-        sessionTask = session.dataTask(with: self.request)
-        sessionTask.resume()
+        let session = URLSession(configuration: URLSessionConfiguration.default,
+                                 delegate: self,
+                                 delegateQueue: nil)
+        self.sessionTask = session.dataTask(with: self.request)
+        self.sessionTask.resume()
     }
     
     override func stopLoading() {
-        sessionTask.cancel()
+        self.sessionTask.cancel()
     }
     
     func urlSession(_ session: URLSession,
@@ -42,19 +43,16 @@ class URLSessionProtocol : URLProtocol, URLSessionTaskDelegate, URLSessionDataDe
         completionHandler(URLSession.ResponseDisposition.allow)
     }
     
-    func urlSession(_ session: URLSession,
-                    dataTask: URLSessionDataTask,
-                    didReceive data: Data) {
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         client?.urlProtocol(self, didLoad: data)
     }
     
-    func urlSession(_ session: URLSession,
-                    task: URLSessionTask,
-                    didCompleteWithError error: Error?) {
-        if (error != nil) {
-            client?.urlProtocol(self, didFailWithError: error!)
-        } else {
-            client?.urlProtocolDidFinishLoading(self)
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error = error {
+            client?.urlProtocol(self, didFailWithError: error)
+            return
         }
+        
+        client?.urlProtocolDidFinishLoading(self)
     }
 }

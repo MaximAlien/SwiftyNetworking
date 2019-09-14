@@ -21,6 +21,9 @@
 		6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */; };
 		6DB428B11DCCC64A006582BE /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */; };
 		6DB428B91DCCC6F9006582BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB428B81DCCC6F9006582BE /* main.swift */; };
+		93605B05232A3A28002F689E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93605B04232A3A28002F689E /* Constants.swift */; };
+		93605B06232A3DE2002F689E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93605B04232A3A28002F689E /* Constants.swift */; };
+		93605B07232A3DE3002F689E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93605B04232A3A28002F689E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +60,7 @@
 		6DB428B61DCCC6F9006582BE /* SwiftyNetworkingTestHost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworkingTestHost; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB428B81DCCC6F9006582BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6DC3E2811DCB6E5A00ED6FDE /* SwiftyNetworking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftyNetworking; sourceTree = BUILT_PRODUCTS_DIR; };
+		93605B04232A3A28002F689E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				6DB428921DCCA0D8006582BE /* main.swift */,
+				93605B04232A3A28002F689E /* Constants.swift */,
 				6DB428961DCCA1D1006582BE /* SwiftyNetworking.swift */,
 				6DB428931DCCA0D8006582BE /* URLSessionProtocol.swift */,
 				6DB428981DCCA9C5006582BE /* URLCacheManager.swift */,
@@ -253,6 +258,7 @@
 				6DB428B01DCCC62E006582BE /* SwiftyNetworking.swift in Sources */,
 				6D8C79101DE0B4D300DD40BE /* URLCacheManager.swift in Sources */,
 				6D8C790C1DE0B33900DD40BE /* URLCacheManagerTests.swift in Sources */,
+				93605B06232A3DE2002F689E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93605B07232A3DE3002F689E /* Constants.swift in Sources */,
 				6D8C790E1DE0B4B200DD40BE /* URLSessionProtocol.swift in Sources */,
 				6D8C790D1DE0B4AA00DD40BE /* URLCacheManager.swift in Sources */,
 				6DB428B91DCCC6F9006582BE /* main.swift in Sources */,
@@ -276,6 +283,7 @@
 				6D58D07D1DF8582600AADCC7 /* JSONObjectBuilder.swift in Sources */,
 				6DB428991DCCA9C5006582BE /* URLCacheManager.swift in Sources */,
 				6DB428941DCCA0D8006582BE /* main.swift in Sources */,
+				93605B05232A3A28002F689E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

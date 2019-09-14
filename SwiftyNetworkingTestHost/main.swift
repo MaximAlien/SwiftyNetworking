@@ -8,4 +8,4 @@
 
 import Foundation
 
-print("Test host for SwiftyNetworking started.")
+print("Test host SwiftyNetworking application has started")

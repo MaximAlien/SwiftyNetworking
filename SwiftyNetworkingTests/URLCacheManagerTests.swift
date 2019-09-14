@@ -22,31 +22,36 @@ class URLCacheManagerTests: XCTestCase {
         print("Started cache request")
         
         // make session task synchronous
-        let expectation: XCTestExpectation = self.expectation(description: "Simple request expectation.")
+        let expectation: XCTestExpectation = self.expectation(description: "Simple request expectation")
         
         // make request
         let session = URLSession.shared
         var sessionTask: URLSessionTask = URLSessionTask()
         
-        sessionTask = session.dataTask(with: URL.init(string: "https://www.google.com/")!) { (data, response, error) in
-            XCTAssertNil(error, "Request should end up without an error.")
-            
-            var respData: Data
-            
-            if (error == nil) {
-                respData = data!
-                URLCacheManager.sharedInstance.cacheData(for: sessionTask, data: respData)
+        sessionTask = session.dataTask(with: Constants.requestURL) { (data, response, error) in
+            XCTAssertNil(error, "Error should be nil")
+
+            if let data = data {
+                URLCacheManager.sharedInstance.cacheData(for: sessionTask, data: data)
+                print("Original data: \(data)")
             } else {
-                respData = URLCacheManager.sharedInstance.cache(for: sessionTask)!
+                XCTAssertNotNil(data, "Data should not be nil")
+            }
+
+            // attempt to load data from cache
+            if let cachedData = URLCacheManager.sharedInstance.cache(for: sessionTask) {
+                print("Cached data: \(cachedData)")
+            } else {
+                print("Cached response data not found")
+                XCTAssertFalse(true, "Cached response should be found")
             }
             
-            XCTAssertNotNil(respData, "Data should have non nil value.")
-            print("Data: \(respData)")
-            
-            var httpResponse: HTTPURLResponse
-            httpResponse = response as! HTTPURLResponse
-            
-            XCTAssertTrue(httpResponse.statusCode == 200, "Response status code should be 200 - OK.")
+            if let response = response {
+                let httpResponse = response as! HTTPURLResponse
+                XCTAssertEqual(httpResponse.statusCode, 200, "Response status code should be 200 - OK")
+            } else {
+                XCTAssertNotNil(response, "Response should not be nil")
+            }
             
             expectation.fulfill()
         }
@@ -54,14 +59,14 @@ class URLCacheManagerTests: XCTestCase {
 
         // wait for expectation with timeout
         self.waitForExpectations(timeout: 10.0) { (error) in
-            XCTAssertNil(error, "Google is not accessible.")
+            XCTAssertNil(error, "Web resource is not accessible")
         }
         
         // remove all cached response data
         URLCacheManager.sharedInstance.removeAllCachedResponses()
         
         let cachedData = URLCacheManager.sharedInstance.cache(for: sessionTask)
-        XCTAssertNil(cachedData, "Cached data should be nil.")
+        XCTAssertNil(cachedData, "Cached data should be nil")
         
         print("Finished cache request")
     }

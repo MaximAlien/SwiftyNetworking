@@ -8,23 +8,20 @@
 
 import Foundation
 
-let kCacheSize = 20 * 1024 * 1024
-let kExpirationKey = "expiration_key"
-
-class URLCacheManager : URLCache {
+final class URLCacheManager : URLCache {
     
-    static let sharedInstance = URLCacheManager()
+    public static let sharedInstance = URLCacheManager()
 
     // MARK: - Initialization methods
     
-    override init() {
+    private override init() {
         super.init()
         
-        let urlCache = URLCache.init(memoryCapacity: kCacheSize, diskCapacity: kCacheSize, diskPath: nil)
+        let urlCache = URLCache(memoryCapacity: Constants.cacheSize, diskCapacity: Constants.cacheSize, diskPath: nil)
         URLCache.shared = urlCache
     }
     
-    override init(memoryCapacity: Int, diskCapacity: Int, diskPath path: String?) {
+    private override init(memoryCapacity: Int, diskCapacity: Int, diskPath path: String?) {
         super.init(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: path)
     }
     
@@ -32,18 +29,31 @@ class URLCacheManager : URLCache {
     
     override func cachedResponse(for request: URLRequest) -> CachedURLResponse? {
         let cachedResponse = super.cachedResponse(for: request)
+
+        // check whether cache has expired, if so it'll be removed
+        if let expirationDate = cachedResponse?.userInfo?[Constants.cacheExpirationKey] as? Date {
+            print("Cached response expiration date: \(expirationDate)")
+
+            let currentDate: Date = Date()
+            print("Current date: \(currentDate)")
+
+            if currentDate.compare(expirationDate) == .orderedDescending {
+                super.removeCachedResponse(for: request)
+                return nil
+            }
+        }
         
         return cachedResponse
     }
     
     override func storeCachedResponse(_ cachedResponse: CachedURLResponse, for request: URLRequest) {
         var userInfo = [String : AnyObject]()
-        userInfo[kExpirationKey] = Date.init() as AnyObject?
+        userInfo[Constants.cacheExpirationKey] = Date(timeIntervalSinceNow: Constants.cacheExpirationDuration) as AnyObject // expire cache after certain time
         
-        let cachedURLResponse = CachedURLResponse.init(response: cachedResponse.response,
-                                                       data: cachedResponse.data,
-                                                       userInfo: userInfo,
-                                                       storagePolicy: cachedResponse.storagePolicy)
+        let cachedURLResponse = CachedURLResponse(response: cachedResponse.response,
+                                                  data: cachedResponse.data,
+                                                  userInfo: userInfo,
+                                                  storagePolicy: cachedResponse.storagePolicy)
         
         super.storeCachedResponse(cachedURLResponse, for: request)
     }
@@ -51,7 +61,7 @@ class URLCacheManager : URLCache {
     // MARK: - Caching helper methods
     
     public func cacheData(for task: URLSessionTask, data: Data) {
-        let cachedResponse = CachedURLResponse.init(response: task.response!, data: data)
+        let cachedResponse = CachedURLResponse(response: task.response!, data: data)
         
         URLCacheManager.sharedInstance.storeCachedResponse(cachedResponse, for: task.currentRequest!)
     }
